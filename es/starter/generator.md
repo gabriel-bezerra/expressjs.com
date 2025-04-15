@@ -1,20 +1,27 @@
 ---
-layout: page
+layout: página
 title: Generador de aplicaciones Express
-menu: starter
+description: Aprenda cómo utilizar la herramienta del generador de aplicaciones Express para crear rápidamente un esqueleto para sus aplicaciones Express.js, configuración de streamlining y configuración.
+menu: iniciador
 lang: es
-description: Learn how to use the Express application generator tool to quickly create
-  a skeleton for your Express.js applications, streamlining setup and configuration.
+redirect_from: /es/starter/generator.html
 ---
 
 # Generador de aplicaciones Express
 
 Utilice la herramienta de generador de aplicaciones, `express`, para crear rápidamente un esqueleto de aplicación.
 
-Instale `express` con el siguiente mandato:
+Puede ejecutar el generador de aplicaciones con el comando `npx` (disponible en Node.js 8.2.0).
 
 ```bash
-$ npm install express-generator -g
+$ npx express-generator
+```
+
+Para versiones anteriores de Node, instale el generador de aplicaciones como un paquete global npm y luego ejecute:
+
+```bash
+$ npm install -g express-generator
+$ express
 ```
 
 Muestre las opciones de mandato con la opción `-h`:
@@ -22,7 +29,7 @@ Muestre las opciones de mandato con la opción `-h`:
 ```bash
 $ express -h
 
-  Usage: express [options][dir]
+  Usage: express [options] [dir]
 
   Options:
 
@@ -33,8 +40,8 @@ $ express -h
         --pug           add pug engine support
     -H, --hogan         add hogan.js engine support
         --no-view       generate without view engine
-    -v, --view &lt;engine&gt; add view &lt;engine&gt; support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
-    -c, --css &lt;engine&gt;  add stylesheet &lt;engine&gt; support (less|stylus|compass|sass) (defaults to plain css)
+    -v, --view <engine> add view <engine> support (ejs|hbs|hjs|jade|pug|twig|vash) (defaults to jade)
+    -c, --css <engine>  add stylesheet <engine> support (less|stylus|compass|sass) (defaults to plain css)
         --git           add .gitignore
     -f, --force         force on non-empty directory
 ```
@@ -82,6 +89,12 @@ En Windows, utilice este mandato:
 > set DEBUG=myapp:* & npm start
 ```
 
+En Windows PowerShell, utilice este comando:
+
+```bash
+PS> $env:DEBUG='myapp:*'; npm start
+```
+
 A continuación, cargue `http://localhost:3000/` en el navegador para acceder a la aplicación.
 
 La aplicación generada tiene la siguiente estructura de directorios:
@@ -111,3 +124,5 @@ La aplicación generada tiene la siguiente estructura de directorios:
 <div class="doc-box doc-info" markdown="1">
 La estructura de la aplicación creada por el generador es sólo una de las muchas formas de estructurar las aplicaciones Express. Puede utilizar esta estructura o modificarla según sus necesidades.
 </div>
+
+### [Anterior: Hola Mundo](/{{ page.lang }}/starter/hello-world.html)&nbsp;&nbsp;&nbsp;&nbsp;[Siguiente: Enrutamiento básico](/{{ page.lang }}/starter/basic-routing.html)

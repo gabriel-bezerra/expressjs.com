@@ -1,20 +1,20 @@
 ---
-layout: page
+layout: página
 title: Direccionamiento básico de Express
-menu: starter
+description: Aprenda los fundamentos de la enrutamiento en aplicaciones Express.js, incluyendo cómo definir rutas, manejar métodos HTTP y crear manejadores de rutas para su servidor web.
+menu: iniciador
 lang: es
-description: Learn the fundamentals of routing in Express.js applications, including
-  how to define routes, handle HTTP methods, and create route handlers for your web
-  server.
+redirect_from: /starter/basic-routing.html
 ---
 
 # Direccionamiento básico
 
-El *direccionamiento* hace referencia a la determinación de cómo responde una aplicación a una solicitud de cliente en un determinado punto final, que es un URI (o una vía de acceso) y un método de solicitud HTTP específico (GET, POST, etc.).
+El _direccionamiento_ hace referencia a la determinación de cómo responde una aplicación a una solicitud de cliente en un determinado punto final, que es un URI (o una vía de acceso) y un método de solicitud HTTP específico (GET, POST, etc.).
 
 Cada ruta puede tener una o varias funciones de manejador, que se excluyen cuando se correlaciona la ruta.
 
 La definición de ruta tiene la siguiente estructura:
+
 ```js
 app.METHOD(PATH, HANDLER)
 ```
@@ -65,3 +65,5 @@ app.delete('/user', (req, res) => {
 ```
 
 Para obtener más detalles sobre el direccionamiento, consulte la [guía de direccionamiento](/{{ page.lang }}/guide/routing.html).
+
+### [Anterior: generador de aplicaciones exprés ](/{{ page.lang }}/starter/generator.html)&nbsp;&nbsp;&nbsp;&nbsp;[Siguiente: expandiendo archivos estáticos en Express ](/{{ page.lang }}/starter/static-files.html)
